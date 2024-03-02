@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>myMemoPad</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🍎 Play</h1>
+    </header>
+
+    <!-- 林檎ちゃんの曲を登録 -->
+    <form id="entryForm">
+        <label for="artistName">アーティスト名:</label>
+        <select id="artistName" name="artistName">
+            <option value="選択してください">選択してください</option>
+            <option value="椎名林檎">椎名林檎</option>
+            <option value="群青日和">群青日和</option>
+        </select>
+        <label for="songName">曲名:</label><input type="text" id="songName" name="songName">
+        <label for="audioPath">音声ファイルパス:</label><input type="text" id="audioPath" name="audioPath">
+        <label for="releaseDate">リリース日:</label><input type="date" id="releaseDate" name="releaseDate">
+        <button type="submit" id="registerButton">登録</button>
+    </form>
+
+    <!-- 登録した林檎ちゃんの曲を一覧で表示する -->
+    <h2>🍎の曲リスト</h2>
+    <ul id="list"></ul>
+    <button type="button" id="deleteButton">選択されたデータを削除</button>
+
+    
+
+    </main>
+
+    <footer><small>G's</small></footer>
+
+    <!-- jqueryの読み込み！ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--JSファイルの読み込み-->
+   <script src="js/apps.js"></script>
+    <script>
+           </script>
+</body>
+
+</html>
