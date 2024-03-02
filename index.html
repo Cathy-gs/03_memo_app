@@ -1,50 +1,73 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>myMemoPad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-2.1.3.min.js"></script>
-    <link rel="stylesheet" href="css/sample.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <title>林檎プレイヤー</title>
 </head>
 
-<body>
 
+
+<body>
     <header>
-        <h1>🍎 Play</h1>
+        <div class="header">
+            <img class="header_logo" src="/kadai/img/logo.png" alt="">
+            <h1>林檎 Player</h1>
+        </div>
     </header>
 
-    <!-- 林檎ちゃんの曲を登録 -->
-    <form id="entryForm">
-        <label for="artistName">アーティスト名:</label>
-        <select id="artistName" name="artistName">
-            <option value="選択してください">選択してください</option>
-            <option value="椎名林檎">椎名林檎</option>
-            <option value="群青日和">群青日和</option>
-        </select>
-        <label for="songName">曲名:</label><input type="text" id="songName" name="songName">
-        <label for="audioPath">音声ファイルパス:</label><input type="text" id="audioPath" name="audioPath">
-        <label for="releaseDate">リリース日:</label><input type="date" id="releaseDate" name="releaseDate">
-        <button type="submit" id="registerButton">登録</button>
-    </form>
-
-    <!-- 登録した林檎ちゃんの曲を一覧で表示する -->
-    <h2>🍎の曲リスト</h2>
-    <ul id="list"></ul>
-    <button type="button" id="deleteButton">選択されたデータを削除</button>
-
+ 
+    <main>
     
+    <div class="input-playlist">
+        <!-- 林檎ちゃんの曲を登録 -->
+        <div class="input">
+            <h2>Play listに登録</h2>
+            <form id="musicForm">
+            <div class="input-artist">
+                <label for="artist">アーティスト情報</label>
+                <select id="artist" name="artist" class="select-input" required>
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="椎名林檎">椎名林檎</option>
+                    <option value="群青日和">群青日和</option>
+                </select>
+            </div>
+            <div class="imput-song">
+                <label for="song">曲名</label>
+                <input type="text" id="song" name="song" class="select-input"  required>
+            </div>
+            <div class="input-youtube">
+                <label for="youtubeLink">YouTubeのリンク</label>
+                <input type="text" id="youtubeLink" name="youtubeLink" class="select-input"  required>
+            </div>
+            <button type="submit" id="registerButton">登録</button>
+            </form>
+        </div>
+
+        <!-- 登録した林檎ちゃんの曲を一覧で表示する -->
+        <div class="playlist">
+            <h2>Play list</h2>
+            <div id="playlist"></div>
+            <button id="deleteButton" style="display: none;" onclick="deleteSelected()">選択した項目を削除</button>
+        </div>
+
+    </div>
 
     </main>
 
-    <footer><small>G's</small></footer>
+    <footer><small>Ringo Player @2024</small></footer>
 
     <!-- jqueryの読み込み！ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--JSファイルの読み込み-->
-   <script src="js/apps.js"></script>
-    <script>
-           </script>
+    <script src="js/apps.js"></script>
+
 </body>
 
 </html>
