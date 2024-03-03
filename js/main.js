@@ -1,0 +1,4 @@
+$(()=> {
+    $('.btn').modalVideo({channel: 'youtube'});
+ });
+ 

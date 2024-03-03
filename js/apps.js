@@ -22,8 +22,8 @@ function displayPlaylist() {
         listItem.innerHTML = `
             <input type="checkbox" id="item${index}" name="item${index}">
             <label for="item${index}">
-                <strong>アーティスト:</strong> ${item.artist}<br>
-                <strong>曲名:</strong> <a href="${item.youtubeLink}" target="_blank">${item.song}</a><br>
+                <strong></strong> <a href="${item.youtubeLink}" target="_blank">${item.song}</a>
+                <strong>　Song by　</strong> ${item.artist}<br>
             </label><br><br>
         `;
         playlistDiv.appendChild(listItem);
